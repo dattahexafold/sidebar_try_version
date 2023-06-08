@@ -1,9 +1,14 @@
 <template>
   
   <nav
-    id="navbarBlur"
-    style="width: max-content;"
-    class="navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl shadow-none bg-default position-sticky  "
+   
+  :class="`${
+      !isNavFixed
+        ? 'navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl shadow-none'
+        : `navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl shadow-none position-sticky ${
+            darkMode ? 'bg-default' : 'bg-white'
+          } left-auto top-2 z-index-sticky`
+    } ${isRTL ? 'top-0 position-sticky z-index-sticky' : ''}`"
     v-bind="$attrs"
     data-scroll="true"
   >
@@ -11,7 +16,6 @@
       <bread-crumbs
         :current-page="currentRouteName"
         :current-directory="currentDirectory"
-        style="margin-left: 240px;"
       />
       <div
         class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none "

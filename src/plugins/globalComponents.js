@@ -1,10 +1,10 @@
 
-import BaseNav from "../components/Navbar/BaseNav";
+// import BaseNav from "../components/Navbar/BaseNav";
 
-const GlobalComponents = {
-  install(app) {
-    app.component("base-nav", BaseNav);
-  },
-};
+// const GlobalComponents = {
+//   install(app) {
+//     app.component("base-nav", BaseNav);
+//   },
+// };
 
-export default GlobalComponents;
+// export default GlobalComponents;
