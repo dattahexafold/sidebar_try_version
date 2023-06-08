@@ -2,38 +2,21 @@ import Sidebar from "./SideBar.vue";
 import SidebarItem from "./SidebarItem.vue";
 import { reactive } from "vue";
 const SidebarStore = reactive({
-  showSidebar: false,
+  showSidebar: true,
   sidebarLinks: [],
   isMinimized: false,
   breakpoint: 1200,
   hovered: false,
-  displaySidebar(value) {
-    if (window.innerWidth > this.breakpoint) {
-      return;
-    }
-    this.isMinimized = !value;
-    this.showSidebar = value;
-    let docClasses = document.body.classList;
-    if (value) {
-      docClasses.add("g-sidenav-pinned");
-      docClasses.add("g-sidenav-show");
-      docClasses.remove("g-sidenav-hidden");
-    } else {
-      docClasses.add("g-sidenav-hidden");
-      docClasses.remove("g-sidenav-pinned");
-      docClasses.remove("g-sidenav-show");
-    }
-  },
+  
   toggleMinimize() {
-    console.log("minimize");
-    // document.body.classList.remove("g-sidenav-pinned");
+    document.body.classList.remove("g-sidenav-pinned");
     this.isMinimized = !this.isMinimized;
     let docClasses = document.body.classList;
 
     if (window.innerWidth <= 820) {
       this.hovered = false; ///
       if (!this.isMinimized) {
-        // document.body.classList.remove("g-sidenav-pinned");
+        document.body.classList.remove("g-sidenav-pinned");
         let docClasses = document.body.classList;
         docClasses.add("g-sidenav-hidden");
         docClasses.remove("g-sidenav-show");
@@ -42,6 +25,19 @@ const SidebarStore = reactive({
           docClasses.remove("g-sidenav-hide");
           docClasses.add("g-sidenav-hidden");
         // },0);
+      }if (window.innerWidth <= 820) {
+        this.hovered = false; ///
+        if (!this.isMinimized) {
+          document.body.classList.remove("g-sidenav-pinned");
+          let docClasses = document.body.classList;
+          docClasses.add("g-sidenav-hidden");
+          docClasses.remove("g-sidenav-show");
+          docClasses.add("g-sidenav-hide");
+          // setTimeout(() => {
+            docClasses.remove("g-sidenav-hide");
+            docClasses.add("g-sidenav-hidden");
+          // },0);
+        }
       }
     }
     if (this.isMinimized) {
