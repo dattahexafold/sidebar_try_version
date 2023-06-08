@@ -9,7 +9,7 @@ import ArgonDashboard from "./plugins/argon-dashboard";
 // const options = { containerClassName: "ct-notification" };
 // ......................v3..........................................
 import "./assets/css/nucleo-icons.css";
-import "./assets/css/nucleo-svg.css"
+// import "./assets/css/nucleo-svg.css"
 
 const appInstance = createApp(App);
 appInstance.use(router);

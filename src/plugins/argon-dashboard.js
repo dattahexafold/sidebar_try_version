@@ -6,7 +6,9 @@ import GlobalDirectives from "./globalDirectives";
 import SidebarPlugin from "../components/SidebarPlugin";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.css"
+
 // ..............................v3....................................
+import "../assets/js/nav-pills.js";
 import "../assets/scss/argon-dashboard.scss"
 export default {
   install(app) {
