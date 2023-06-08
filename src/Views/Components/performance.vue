@@ -60,19 +60,6 @@
             />
           </div>
           <div class="mt-4 row">
-            <div class="col-md-6">
-              <bar-chart
-                title="Overall Sales"
-                height="300"
-                :chart="{
-                  labels: ['16-20', '21-25', '26-30', '31-36', '36-42', '42+'],
-                  datasets: {
-                    label: 'Sales by age',
-                    data: [15, 20, 12, 60, 20, 15],
-                  },
-                }"
-              />
-            </div>
             <div class="mt-4 col-md-6 mt-md-0">
               <gradient-line-chart
                 id="chart-line"
@@ -101,6 +88,20 @@
               />
             </div>
 
+            <div class="col-md-6">
+              <bar-chart
+                title="Overall Sales"
+                height="300"
+                :chart="{
+                  labels: ['16-20', '21-25', '26-30', '31-36', '36-42', '42+'],
+                  datasets: {
+                    label: 'Sales by age',
+                    data: [15, 20, 12, 60, 20, 15],
+                  },
+                }"
+              />
+            </div>
+            
             <div class="mt-4 row ">
               <div class="col-lg-3 col-md-6 col-12 mt-3 ">
                 <line-chart
@@ -243,6 +244,9 @@
                 />
               </div>
             </div>
+            <div class="row">
+              <OrderList/>
+            </div>
           </div>
         </div>
       </div>
@@ -255,6 +259,7 @@ import MiniStatisticsCard from "@/components/cards/MiniStatisticsCard.vue";
 import BarChart from "@/components/Charts/BarChart.vue";
 import GradientLineChart from "@/components/Charts/GradientLineChart.vue";
 import LineChart from "@/components/Charts/LineChart.vue";
+import OrderList from "@/components/OrderList.vue";
 export default {
   name: "PerformanceCompo",
   components: {
@@ -262,6 +267,7 @@ export default {
     BarChart,
     GradientLineChart,
     LineChart,
+    OrderList
   },
 };
 </script>
