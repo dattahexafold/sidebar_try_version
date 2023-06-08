@@ -136,7 +136,7 @@
         </ul>
       </template>
     </side-bar>
-    <div class="main-content">
+    <div class="main-content bg-light">
       <!-- <dashboard-navbar :type="$route.meta.navbarType"></dashboard-navbar> -->
 
 <router-view>

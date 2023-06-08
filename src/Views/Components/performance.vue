@@ -59,6 +59,81 @@
               }"
             />
           </div>
+          <div class="mt-4 row">
+      <div class="col-md-6">
+        <bar-chart
+          title="Bar Chart"
+          height="300"
+          :chart="{
+            labels: ['16-20', '21-25', '26-30', '31-36', '36-42', '42+'],
+            datasets: {
+              label: 'Sales by age',
+              data: [15, 20, 12, 60, 20, 15],
+            },
+          }"
+        />
+      </div>
+      <div class="mt-4 col-md-6 mt-md-0">
+       <gradient-line-chart
+              id="chart-line"
+              title="Sales Overview"
+              description="<i class='fa fa-arrow-up text-success'></i>
+      <span class='font-weight-bold'>4% more</span> in 2021"
+              :chart="{
+                labels: [
+                  'Apr',
+                  'May',
+                  'Jun',
+                  'Jul',
+                  'Aug',
+                  'Sep',
+                  'Oct',
+                  'Nov',
+                  'Dec'
+                ],
+                datasets: [
+                  {
+                    label: 'Mobile Apps',
+                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500]
+                  }
+                ]
+              }"
+            />
+      </div>
+
+
+
+
+      <!-- <div class="row"> -->
+          <!-- <div class="col-lg-7 mb-lg"> -->
+            <!-- <gradient-line-chart
+              id="chart-line"
+              title="Sales Overview"
+              description="<i class='fa fa-arrow-up text-success'></i>
+      <span class='font-weight-bold'>4% more</span> in 2021"
+              :chart="{
+                labels: [
+                  'Apr',
+                  'May',
+                  'Jun',
+                  'Jul',
+                  'Aug',
+                  'Sep',
+                  'Oct',
+                  'Nov',
+                  'Dec'
+                ],
+                datasets: [
+                  {
+                    label: 'Mobile Apps',
+                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500]
+                  }
+                ]
+              }"
+            /> -->
+          <!-- </div> -->
+    </div>
+   
         </div>
         </div>
         </div>
@@ -67,10 +142,14 @@
 
 <script>
 import MiniStatisticsCard from '@/components/cards/MiniStatisticsCard.vue';
+import BarChart from '@/components/Charts/BarChart.vue'
+import GradientLineChart from '@/components/Charts/GradientLineChart.vue'
     export default {
         name:"PerformanceCompo",
         components:{
-            MiniStatisticsCard
+            MiniStatisticsCard,
+            BarChart,
+            GradientLineChart
         }
     }
 </script>
