@@ -14,11 +14,23 @@
             rowReverse ? 'me-2' : '',
           ]"
         >
-          <i
+          <!-- <i
             class="text-lg opacity-10"
             :class="typeof icon === 'string' ? icon : icon.component"
             aria-hidden="true"
-          ></i>
+          ></i> -->
+         
+              <div class="text-lg mt-2 opacity-10"  aria-hidden="true" style="margin-left: auto;margin-right: auto;">
+                <slot name="icon">
+
+                </slot>
+              </div>
+
+
+
+          <div>
+
+          </div>
         </div>
         <div :class="classContent">
           <div class="numbers">
@@ -79,6 +91,10 @@ export default {
       type: String,
       default: "",
     },
+    svg:{
+      type:String,
+      default:""
+    },
     value: {
       type: [Object, String, Number],
       required: true,
@@ -103,9 +119,9 @@ export default {
     },
     icon: {
       type: [String, Object],
-      component: {
-        type: String,
-      },
+      // component: {
+      //   type: String,
+      // },
       background: {
         type: String,
       },
