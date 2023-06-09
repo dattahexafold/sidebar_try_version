@@ -6,11 +6,7 @@
     <span class="mask  " style="background-color: #073552;"></span>
     
   </div>
-  <!-- <notifications></notifications> -->
-  <!-- <MainNavbar v-if="showNavbar" /> -->
-  <side-bar v-if="!$route.meta.hideSidebar">
-    
-  </side-bar>
+ 
    
     <div class="main-content bg-light">
       <!-- <dashboard-navbar :type="$route.meta.navbarType"></dashboard-navbar> -->

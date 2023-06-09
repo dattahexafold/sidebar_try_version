@@ -42,7 +42,7 @@
         isNavFixed ? 'text-dark' : 'text-white '
       }`"
     >
-      {{ currentPage }}
+      {{ currentDirectory }}
     </h6>
   </nav>
 </template>

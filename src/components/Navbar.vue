@@ -1,7 +1,7 @@
 <template>
   
   <nav
-   
+   class="z-2"
   :class="`${
       !isNavFixed
         ? 'navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl shadow-none'
@@ -10,44 +10,17 @@
           } left-auto top-2 z-index-sticky`
     } ${isRTL ? 'top-0 position-sticky z-index-sticky' : ''}`"
     v-bind="$attrs"
-    data-scroll="true"
-    style="margin-top:-20px"
   >
     <div class="px-3 py-1 container-fluid ">
       <bread-crumbs
         :current-page="currentRouteName"
-        :current-directory="currentDirectory"
+        current-directory="Distributor"
       />
       <div
         class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none "
         :class="isRTL ? 'me-3' : ''"
       >
-        <!-- <a
-          href="#"
-          class="p-0 nav-link text-body"
-          @click.prevent="navbarMinimize"
-        >
-          <div class="sidenav-toggler-inner">
-            <i
-              class="sidenav-toggler-line"
-              :class="
-                isNavFixed && !darkMode ? ' opacity-8 bg-dark' : 'bg-white'
-              "
-            ></i>
-            <i
-              class="sidenav-toggler-line"
-              :class="
-                isNavFixed && !darkMode ? ' opacity-8 bg-dark' : 'bg-white'
-              "
-            ></i>
-            <i
-              class="sidenav-toggler-line"
-              :class="
-                isNavFixed && !darkMode ? ' opacity-8 bg-dark' : 'bg-white'
-              "
-            ></i>
-          </div>
-        </a> -->
+       
       </div>
       <div
         id="navbar"
@@ -84,41 +57,8 @@
               <span v-else class="d-sm-inline d-none">Sign In</span>
             </router-link>
           </li>
-          <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-            <a
-              id="iconNavbarSidenav"
-              href="#"
-              class="p-0 nav-link text-white"
-              @click.prevent="navbarMinimize"
-            >
-              <div class="sidenav-toggler-inner">
-                <i
-                  :class="`sidenav-toggler-line ${
-                    isNavFixed && !darkMode ? ' opacity-8 bg-dark' : 'bg-white'
-                  }`"
-                ></i>
-                <i
-                  :class="`sidenav-toggler-line ${
-                    isNavFixed && !darkMode ? ' opacity-8 bg-dark' : 'bg-white'
-                  }`"
-                ></i>
-                <i
-                  :class="`sidenav-toggler-line ${
-                    isNavFixed && !darkMode ? ' opacity-8 bg-dark' : 'bg-white'
-                  }`"
-                ></i>
-              </div>
-            </a>
-          </li>
-          <li class="px-3 nav-item d-flex align-items-center">
-            <a class="p-0 nav-link" @click="toggleConfigurator">
-              <i
-                :class="`cursor-pointer fa fa-cog fixed-plugin-button-nav ${
-                  !isNavFixed || darkMode ? 'text-white' : 'opacity-8 text-dark'
-                }`"
-              ></i>
-            </a>
-          </li>
+          
+          
           <li
             class="nav-item dropdown d-flex align-items-center"
             :class="isRTL ? 'ps-2' : 'pe-2'"
@@ -265,7 +205,8 @@ export default {
   computed: {
     ...mapState(["isRTL", "isNavFixed", "darkMode"]),
     currentRouteName() {
-      return this.$route.name;
+      // return this.$route.name;
+      return "Performance"
     },
     currentDirectory() {
       let dir = this.$route.path.split("/")[1];
