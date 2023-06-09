@@ -7,7 +7,7 @@
     <ul class="navbar-nav">
         <li class="nav-item">
             <SidenavCollapse
-          nav-text="Dashboards"
+          nav-text="Dashboard"
             >
             <template #icon>
                 <img src="../../assets/svg/dashboard_home_icon.svg" alt="">
