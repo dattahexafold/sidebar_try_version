@@ -84,11 +84,11 @@
                 <a class="dropdown-item border-radius-md" href="javascript:;">
                   <div class="py-1 d-flex">
                     <div class="my-auto">
-                      <!-- <img
-                        src="../../assets/img/team-2.jpg"
+                      <img
+                        src="../assets/svg/user.svg"
                         class="avatar avatar-sm me-3"
                         alt="user image"
-                      /> -->
+                      />
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-1 text-sm font-weight-normal">
