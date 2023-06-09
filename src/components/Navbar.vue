@@ -52,10 +52,14 @@
               "
               target="_blank"
             >
-              <i class="fa fa-user" :class="isRTL ? 'ms-sm-2' : 'me-sm-1'"></i>
-              <span v-if="isRTL" class="d-sm-inline d-none">يسجل دخول</span>
-              <span v-else class="d-sm-inline d-none">Sign In</span>
+             <img src="../assets/svg/user.svg" alt="" srcset="">
             </router-link>
+          </li>
+          <li class="nav-item d-flex align-items-center cursor-pointer mr-3">
+            <div  class="px-0 nav-link font-weight-bold " style="margin:0px 15px -3px" >
+
+              <img src="../assets/svg/notification.svg" alt="" srcset="" >
+            </div>
           </li>
           
           
@@ -84,11 +88,11 @@
                 <a class="dropdown-item border-radius-md" href="javascript:;">
                   <div class="py-1 d-flex">
                     <div class="my-auto">
-                      <img
+                      <!-- <img
                         src="../assets/svg/user.svg"
                         class="avatar avatar-sm me-3"
                         alt="user image"
-                      />
+                      /> -->
                     </div>
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="mb-1 text-sm font-weight-normal">

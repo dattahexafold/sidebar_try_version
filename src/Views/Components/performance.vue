@@ -4,64 +4,9 @@
       <div class="col-lg-12">
         <div class="row">
 
-
+          <UserKpiComponent/>
           <KpiComponents/>
-          <!-- <div class="col-lg-3 col-md-6 col-12">
-            <mini-statistics-card
-              title="Overall Customer"
-              value="53,000"
-              description="<span
-                class='text-sm font-weight-bolder text-success'
-                >+55%</span> since yesterday"
-              :icon="{
-                component: 'ni ni-money-coins',
-                background: 'bg-gradient-primary',
-                shape: 'rounded-circle',
-              }"
-            />
-          </div>
-          <div class="col-lg-3 col-md-6 col-12">
-            <mini-statistics-card
-              title="Deposit Manager"
-              value="2,300"
-              description="<span
-                class='text-sm font-weight-bolder text-success'
-                >+3%</span> since last week"
-              :icon="{
-                component: 'ni ni-world',
-                background: 'bg-gradient-danger',
-                shape: 'rounded-circle',
-              }"
-            />
-          </div>
-          <div class="col-lg-3 col-md-6 col-12">
-            <mini-statistics-card
-              title="Delevery agents"
-              value="+3,462"
-              description="<span
-                class='text-sm font-weight-bolder text-danger'
-                >-2%</span> since last quarter"
-              :icon="{
-                component: 'ni ni-paper-diploma',
-                background: 'bg-gradient-success',
-                shape: 'rounded-circle',
-              }"
-            />
-          </div>
-          <div class="col-lg-3 col-md-6 col-12">
-            <mini-statistics-card
-              title="Complaints"
-              value="430"
-              description="<span
-                class='text-sm font-weight-bolder text-success'
-                >+5%</span> than last month"
-              :icon="{
-                component: 'ni ni-cart',
-                background: 'bg-gradient-warning',
-                shape: 'rounded-circle',
-              }"
-            />
-          </div> -->
+         
           <div class="mt-4 row">
             <div class="mt-4 col-md-6 mt-md-0">
               <gradient-line-chart
@@ -259,6 +204,7 @@
 
 <script>
 import KpiComponents from "@/components/cards/KpiComponents.vue";
+import UserKpiComponent from "@/components/cards/UserKpiComponent.vue";
 import BarChart from "@/components/Charts/BarChart.vue";
 import GradientLineChart from "@/components/Charts/GradientLineChart.vue";
 import LineChart from "@/components/Charts/LineChart.vue";
@@ -270,8 +216,9 @@ export default {
     GradientLineChart,
     LineChart,
     OrderList,
-    KpiComponents
-  },
+    KpiComponents,
+    UserKpiComponent
+},
 };
 </script>
 
