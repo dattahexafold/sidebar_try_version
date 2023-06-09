@@ -60,7 +60,7 @@
               }"
             />
           </div>
-          <div class="mt-4 row">
+          <div class="row ">
             <div class="mt-4 col-md-6 mt-md-0">
               <gradient-line-chart
                 id="chart-line"
@@ -89,7 +89,7 @@
               />
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 mt-4 mt-md-0">
               <bar-chart
                 title="Overall Sales"
                 height="300"

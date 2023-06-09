@@ -1,13 +1,13 @@
 <template>
     <div
     id="sidenav-collapse-main"
-    class="collapse navbar-collapse w-100 h-auto h-100"
+    class="collapse navbar-collapse w-100 h-auto h-100 mt-0"
     style="position:relative;left:20px"
     >
     <ul class="navbar-nav">
         <li class="nav-item">
             <SidenavCollapse
-          nav-text="Dashboard"
+          nav-text=" Dashboard"
             >
             <template #icon>
                 <img src="../../assets/svg/dashboard_home_icon.svg" alt="">
@@ -109,10 +109,10 @@
 
             </SidenavCollapse>
         </li>
-        <br/>
-        <hr class="mt-0 horizontal dark" />
+        
+        <hr class="mt-2 horizontal dark" />
 
-        <li class="nav-item">
+        <li class="nav-item ">
             <SidenavCollapse
           nav-text="Settings"
             >

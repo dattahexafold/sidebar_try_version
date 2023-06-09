@@ -2,7 +2,7 @@
   <component
     :is="baseComponent"
     :to="link.path ? link.path : '/'"
-    class="nav-item"
+    class="nav-item "
     :class="{ active: isActive }"
     tag="li"
 >

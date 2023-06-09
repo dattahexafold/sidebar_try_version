@@ -1,571 +1,556 @@
 <template>
-  <div class="container-fluid py-4 bg-white rounded-4 mt-5 ms-3">
-    <div class="d-sm-flex justify-content-between">
-      <div>
-        <h6 class="d-flex"  >3kg|Steel</h6>
-        <!-- <h6>Showing 125 orders of 3kg steel cylinder</h6> -->
-        <!-- <argon-button color="blue" variant="outline">New order</argon-button> -->
-      </div>
-      <div class="d-flex">
-        <div class="dropdown d-inline">
-          <argon-button
-            id="navbarDropdownMenuLink2"
-            color="blue"
-            variant="outline"
-            class="dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            >Filters</argon-button
-          >
-          <ul
-            class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
-            aria-labelledby="navbarDropdownMenuLink2"
-            style
-          >
-            <li>
-              <a class="dropdown-item border-radius-md" href="javascript:;"
-                >Status: Paid</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item border-radius-md" href="javascript:;"
-                >Status: Refunded</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item border-radius-md" href="javascript:;"
-                >Status: Canceled</a
-              >
-            </li>
-            <li>
-              <hr class="horizontal dark my-2" />
-            </li>
-            <li>
-              <a
-                class="dropdown-item border-radius-md text-danger"
-                href="javascript:;"
-                >Remove Filter</a
-              >
-            </li>
-          </ul>
-        </div>
-        <argon-button
-          class="btn-icon ms-2 export"
-          size
-          color="blue"
-          variant="outline"
-          data-type="csv"
-        >
-          <span class="btn-inner--icon">
-            <i class="ni ni-archive-2"></i>
-          </span>
-          <span class="btn-inner--text">Export CSV</span>
-        </argon-button>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        <div class="card mt-4">
+  <div class="container-fluid bg-white rounded-4 ms-3 mt-5">
+    
           <div class="table-responsive">
-            <table id="order-list" class="table table-flush">
+            <div class="d-flex justify-content-between mt-3">
+              <div class="ms-3">
+                <!-- Card header -->
+                <div class="card-heade">
+                  <h6 class="d-flex">3kg|Steel</h6>
+                  <p>Showing 125 orders of 3kg steel cylinder</p>
+                </div>
+              </div>
+              <div>
+                <div class="dropdown d-inline">
+                  <argon-button
+                    id="navbarDropdownMenuLink2"
+                    color="blue"
+                    variant="outline"
+                    class="dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Filters</argon-button
+                  >
+                </div>
+                <div class="dropdown d-inline">
+                  <argon-button
+                    class="btn-icon ms-md-2  export"
+                    size
+                    color="blue"
+                    variant="outline"
+                    data-type="csv"
+                  >
+                    <span class="btn-inner--icon">
+                      <i class="ni ni-archive-2"></i>
+                    </span>
+                    <span class="btn-inner--text">Export CSV</span>
+                  </argon-button>
+                </div>
+              </div>
+            </div>
+
+            <table id="datatable-search" class="table table-flush">
               <thead class="thead-light">
                 <tr>
-                  <th>Id</th>
-                  <th>Date</th>
-                  <th>Status</th>
-                  <th>Customer</th>
-                  <th>Product</th>
-                  <th>Revenue</th>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10421</p>
-                    </div>
-                  </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">1 Nov, 10:20 AM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-avatar
-                        :img="img1"
-                        class="me-2"
-                        size="xs"
-                        circular
-                        alt="user image"
-                      />
-                      <span>Orlando Imieto</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">Nike Sport V2</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$140,20</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">Tiger Nixon</td>
+                  <td class="text-sm font-weight-normal">System Architect</td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">61</td>
+                  <td class="text-sm font-weight-normal">2011/04/25</td>
+                  <td class="text-sm font-weight-normal">$320,800</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10422</p>
-                    </div>
-                  </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">1 Nov, 10:53 AM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-avatar
-                        :img="img2"
-                        size="xs"
-                        circular
-                        class="me-2"
-                        alt="user image"
-                      />
-                      <span>Alice Murinho</span>
-                    </div>
-                  </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">Valvet T-shirt</span>
-                  </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">$42,00</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">Garrett Winters</td>
+                  <td class="text-sm font-weight-normal">Accountant</td>
+                  <td class="text-sm font-weight-normal">Tokyo</td>
+                  <td class="text-sm font-weight-normal">63</td>
+                  <td class="text-sm font-weight-normal">2011/07/25</td>
+                  <td class="text-sm font-weight-normal">$170,750</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10423</p>
-                    </div>
+                  <td class="text-sm font-weight-normal">Ashton Cox</td>
+                  <td class="text-sm font-weight-normal">
+                    Junior Technical Author
                   </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">1 Nov, 11:13 AM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="dark"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-undo" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Refunded</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="avatar avatar-xs me-2 bg-gradient-dark">
-                        <span>M</span>
-                      </div>
-                      <span>Michael Mirra</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">
-                      Leather Wallet
-                      <span class="text-secondary ms-2">+1 more</span>
-                    </span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$25,50</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">66</td>
+                  <td class="text-sm font-weight-normal">2009/01/12</td>
+                  <td class="text-sm font-weight-normal">$86,000</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10424</p>
-                    </div>
+                  <td class="text-sm font-weight-normal">Cedric Kelly</td>
+                  <td class="text-sm font-weight-normal">
+                    Senior Javascript Developer
                   </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">1 Nov, 12:20 PM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="d-flex align-items-center">
-                        <argon-avatar
-                          :img="img3"
-                          size="xs"
-                          class="me-2"
-                          circular
-                          alt="user image"
-                        />
-                        <span>Andrew Nichel</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">Bracelet Onu-Lino</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$19,40</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">22</td>
+                  <td class="text-sm font-weight-normal">2012/03/29</td>
+                  <td class="text-sm font-weight-normal">$433,060</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10425</p>
-                    </div>
-                  </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">1 Nov, 1:40 PM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="danger"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-times" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Canceled</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="d-flex align-items-center">
-                        <argon-avatar
-                          :img="img4"
-                          size="xs"
-                          circular
-                          class="me-2"
-                          alt="user image"
-                        />
-                        <span>Sebastian Koga</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">
-                      Phone Case Pink
-                      <span class="text-secondary ms-2">x 2</span>
-                    </span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$44,90</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">Airi Satou</td>
+                  <td class="text-sm font-weight-normal">Accountant</td>
+                  <td class="text-sm font-weight-normal">Tokyo</td>
+                  <td class="text-sm font-weight-normal">33</td>
+                  <td class="text-sm font-weight-normal">2008/11/28</td>
+                  <td class="text-sm font-weight-normal">$162,700</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10426</p>
-                    </div>
+                  <td class="text-sm font-weight-normal">Brielle Williamson</td>
+                  <td class="text-sm font-weight-normal">
+                    Integration Specialist
                   </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">1 Nov, 2:19 AM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="avatar avatar-xs me-2 bg-gradient-success">
-                        <span>L</span>
-                      </div>
-                      <span>Laur Gilbert</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">Backpack Niver</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$112,50</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">61</td>
+                  <td class="text-sm font-weight-normal">2012/12/02</td>
+                  <td class="text-sm font-weight-normal">$372,000</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10427</p>
-                    </div>
-                  </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">1 Nov, 3:42 AM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="avatar avatar-xs me-2 bg-gradient-dark">
-                        <span>I</span>
-                      </div>
-                      <span>Iryna Innda</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">Adidas Vio</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$200,00</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">Herrod Chandler</td>
+                  <td class="text-sm font-weight-normal">Sales Assistant</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">59</td>
+                  <td class="text-sm font-weight-normal">2012/08/06</td>
+                  <td class="text-sm font-weight-normal">$137,500</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10428</p>
-                    </div>
+                  <td class="text-sm font-weight-normal">Rhona Davidson</td>
+                  <td class="text-sm font-weight-normal">
+                    Integration Specialist
                   </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">2 Nov, 9:32 AM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="avatar avatar-xs me-2 bg-gradient-dark">
-                        <span>A</span>
-                      </div>
-                      <span>Arrias Liunda</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">Airpods 2 Gen</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$350,00</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">Tokyo</td>
+                  <td class="text-sm font-weight-normal">55</td>
+                  <td class="text-sm font-weight-normal">2010/10/14</td>
+                  <td class="text-sm font-weight-normal">$327,900</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10429</p>
-                    </div>
+                  <td class="text-sm font-weight-normal">Colleen Hurst</td>
+                  <td class="text-sm font-weight-normal">
+                    Javascript Developer
                   </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">2 Nov, 10:14 AM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="d-flex align-items-center">
-                        <argon-avatar
-                          :img="img5"
-                          size="xs"
-                          circular
-                          class="me-2"
-                          alt="user image"
-                        />
-                        <span>Rugna Ilpio</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">Bracelet Warret</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$15,00</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">39</td>
+                  <td class="text-sm font-weight-normal">2009/09/15</td>
+                  <td class="text-sm font-weight-normal">$205,500</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10430</p>
-                    </div>
-                  </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">2 Nov, 12:56 PM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="dark"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-undo" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Refunded</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="d-flex align-items-center">
-                        <argon-avatar
-                          :img="img6"
-                          size="xs"
-                          class="me-2"
-                          alt="user image"
-                          circular
-                        />
-                        <span>Anna Landa</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">
-                      Watter Bottle India
-                      <span class="text-secondary ms-2">x 3</span>
-                    </span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$25,00</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">Sonya Frost</td>
+                  <td class="text-sm font-weight-normal">Software Engineer</td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">23</td>
+                  <td class="text-sm font-weight-normal">2008/12/13</td>
+                  <td class="text-sm font-weight-normal">$103,600</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10431</p>
-                    </div>
-                  </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">2 Nov, 3:12 PM</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="avatar avatar-xs me-2 bg-gradient-dark">
-                        <span>K</span>
-                      </div>
-                      <span>Karl Innas</span>
-                    </div>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">Kitchen Gadgets</span>
-                  </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$164,90</span>
-                  </td>
+                  <td class="text-sm font-weight-normal">Jena Gaines</td>
+                  <td class="text-sm font-weight-normal">Office Manager</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">30</td>
+                  <td class="text-sm font-weight-normal">2008/12/19</td>
+                  <td class="text-sm font-weight-normal">$90,560</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <p class="text-xs font-weight-bold ms-2 mb-0">#10432</p>
-                    </div>
+                  <td class="text-sm font-weight-normal">Quinn Flynn</td>
+                  <td class="text-sm font-weight-normal">Support Lead</td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">22</td>
+                  <td class="text-sm font-weight-normal">2013/03/03</td>
+                  <td class="text-sm font-weight-normal">$342,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Charde Marshall</td>
+                  <td class="text-sm font-weight-normal">Regional Director</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">36</td>
+                  <td class="text-sm font-weight-normal">2008/10/16</td>
+                  <td class="text-sm font-weight-normal">$470,600</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Haley Kennedy</td>
+                  <td class="text-sm font-weight-normal">
+                    Senior Marketing Designer
                   </td>
-                  <td class="font-weight-bold">
-                    <span class="my-2 text-xs">2 Nov, 5:12 PM</span>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">43</td>
+                  <td class="text-sm font-weight-normal">2012/12/18</td>
+                  <td class="text-sm font-weight-normal">$313,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">
+                    Tatyana Fitzpatrick
                   </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <argon-button
-                        color="success"
-                        variant="outline"
-                        class="btn-icon-only btn-rounded mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"
-                      >
-                        <i class="fas fa-check" aria-hidden="true"></i>
-                      </argon-button>
-                      <span>Paid</span>
-                    </div>
+                  <td class="text-sm font-weight-normal">Regional Director</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">19</td>
+                  <td class="text-sm font-weight-normal">2010/03/17</td>
+                  <td class="text-sm font-weight-normal">$385,750</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Michael Silva</td>
+                  <td class="text-sm font-weight-normal">Marketing Designer</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">66</td>
+                  <td class="text-sm font-weight-normal">2012/11/27</td>
+                  <td class="text-sm font-weight-normal">$198,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Paul Byrd</td>
+                  <td class="text-sm font-weight-normal">
+                    Chief Financial Officer (CFO)
                   </td>
-                  <td class="text-xs font-weight-bold">
-                    <div class="d-flex align-items-center">
-                      <div class="avatar avatar-xs me-2 bg-gradient-info">
-                        <span>O</span>
-                      </div>
-                      <span>Oana Kilas</span>
-                    </div>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">64</td>
+                  <td class="text-sm font-weight-normal">2010/06/09</td>
+                  <td class="text-sm font-weight-normal">$725,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Gloria Little</td>
+                  <td class="text-sm font-weight-normal">
+                    Systems Administrator
                   </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">Office Papers</span>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">59</td>
+                  <td class="text-sm font-weight-normal">2009/04/10</td>
+                  <td class="text-sm font-weight-normal">$237,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Bradley Greer</td>
+                  <td class="text-sm font-weight-normal">Software Engineer</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">41</td>
+                  <td class="text-sm font-weight-normal">2012/10/13</td>
+                  <td class="text-sm font-weight-normal">$132,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Dai Rios</td>
+                  <td class="text-sm font-weight-normal">Personnel Lead</td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">35</td>
+                  <td class="text-sm font-weight-normal">2012/09/26</td>
+                  <td class="text-sm font-weight-normal">$217,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Jenette Caldwell</td>
+                  <td class="text-sm font-weight-normal">Development Lead</td>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">30</td>
+                  <td class="text-sm font-weight-normal">2011/09/03</td>
+                  <td class="text-sm font-weight-normal">$345,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Yuri Berry</td>
+                  <td class="text-sm font-weight-normal">
+                    Chief Marketing Officer (CMO)
                   </td>
-                  <td class="text-xs font-weight-bold">
-                    <span class="my-2 text-xs">$23,90</span>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">40</td>
+                  <td class="text-sm font-weight-normal">2009/06/25</td>
+                  <td class="text-sm font-weight-normal">$675,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Caesar Vance</td>
+                  <td class="text-sm font-weight-normal">Pre-Sales Support</td>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">21</td>
+                  <td class="text-sm font-weight-normal">2011/12/12</td>
+                  <td class="text-sm font-weight-normal">$106,450</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Doris Wilder</td>
+                  <td class="text-sm font-weight-normal">Sales Assistant</td>
+                  <td class="text-sm font-weight-normal">Sidney</td>
+                  <td class="text-sm font-weight-normal">23</td>
+                  <td class="text-sm font-weight-normal">2010/09/20</td>
+                  <td class="text-sm font-weight-normal">$85,600</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Angelica Ramos</td>
+                  <td class="text-sm font-weight-normal">
+                    Chief Executive Officer (CEO)
                   </td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">47</td>
+                  <td class="text-sm font-weight-normal">2009/10/09</td>
+                  <td class="text-sm font-weight-normal">$1,200,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Gavin Joyce</td>
+                  <td class="text-sm font-weight-normal">Developer</td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">42</td>
+                  <td class="text-sm font-weight-normal">2010/12/22</td>
+                  <td class="text-sm font-weight-normal">$92,575</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Jennifer Chang</td>
+                  <td class="text-sm font-weight-normal">Regional Director</td>
+                  <td class="text-sm font-weight-normal">Singapore</td>
+                  <td class="text-sm font-weight-normal">28</td>
+                  <td class="text-sm font-weight-normal">2010/11/14</td>
+                  <td class="text-sm font-weight-normal">$357,650</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Brenden Wagner</td>
+                  <td class="text-sm font-weight-normal">Software Engineer</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">28</td>
+                  <td class="text-sm font-weight-normal">2011/06/07</td>
+                  <td class="text-sm font-weight-normal">$206,850</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Fiona Green</td>
+                  <td class="text-sm font-weight-normal">
+                    Chief Operating Officer (COO)
+                  </td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">48</td>
+                  <td class="text-sm font-weight-normal">2010/03/11</td>
+                  <td class="text-sm font-weight-normal">$850,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Shou Itou</td>
+                  <td class="text-sm font-weight-normal">Regional Marketing</td>
+                  <td class="text-sm font-weight-normal">Tokyo</td>
+                  <td class="text-sm font-weight-normal">20</td>
+                  <td class="text-sm font-weight-normal">2011/08/14</td>
+                  <td class="text-sm font-weight-normal">$163,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Michelle House</td>
+                  <td class="text-sm font-weight-normal">
+                    Integration Specialist
+                  </td>
+                  <td class="text-sm font-weight-normal">Sidney</td>
+                  <td class="text-sm font-weight-normal">37</td>
+                  <td class="text-sm font-weight-normal">2011/06/02</td>
+                  <td class="text-sm font-weight-normal">$95,400</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Suki Burks</td>
+                  <td class="text-sm font-weight-normal">Developer</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">53</td>
+                  <td class="text-sm font-weight-normal">2009/10/22</td>
+                  <td class="text-sm font-weight-normal">$114,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Prescott Bartlett</td>
+                  <td class="text-sm font-weight-normal">Technical Author</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">27</td>
+                  <td class="text-sm font-weight-normal">2011/05/07</td>
+                  <td class="text-sm font-weight-normal">$145,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Gavin Cortez</td>
+                  <td class="text-sm font-weight-normal">Team Leader</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">22</td>
+                  <td class="text-sm font-weight-normal">2008/10/26</td>
+                  <td class="text-sm font-weight-normal">$235,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Martena Mccray</td>
+                  <td class="text-sm font-weight-normal">Post-Sales support</td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">46</td>
+                  <td class="text-sm font-weight-normal">2011/03/09</td>
+                  <td class="text-sm font-weight-normal">$324,050</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Unity Butler</td>
+                  <td class="text-sm font-weight-normal">Marketing Designer</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">47</td>
+                  <td class="text-sm font-weight-normal">2009/12/09</td>
+                  <td class="text-sm font-weight-normal">$85,675</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Howard Hatfield</td>
+                  <td class="text-sm font-weight-normal">Office Manager</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">51</td>
+                  <td class="text-sm font-weight-normal">2008/12/16</td>
+                  <td class="text-sm font-weight-normal">$164,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Hope Fuentes</td>
+                  <td class="text-sm font-weight-normal">Secretary</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">41</td>
+                  <td class="text-sm font-weight-normal">2010/02/12</td>
+                  <td class="text-sm font-weight-normal">$109,850</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Vivian Harrell</td>
+                  <td class="text-sm font-weight-normal">
+                    Financial Controller
+                  </td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">62</td>
+                  <td class="text-sm font-weight-normal">2009/02/14</td>
+                  <td class="text-sm font-weight-normal">$452,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Timothy Mooney</td>
+                  <td class="text-sm font-weight-normal">Office Manager</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">37</td>
+                  <td class="text-sm font-weight-normal">2008/12/11</td>
+                  <td class="text-sm font-weight-normal">$136,200</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Jackson Bradshaw</td>
+                  <td class="text-sm font-weight-normal">Director</td>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">65</td>
+                  <td class="text-sm font-weight-normal">2008/09/26</td>
+                  <td class="text-sm font-weight-normal">$645,750</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Olivia Liang</td>
+                  <td class="text-sm font-weight-normal">Support Engineer</td>
+                  <td class="text-sm font-weight-normal">Singapore</td>
+                  <td class="text-sm font-weight-normal">64</td>
+                  <td class="text-sm font-weight-normal">2011/02/03</td>
+                  <td class="text-sm font-weight-normal">$234,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Bruno Nash</td>
+                  <td class="text-sm font-weight-normal">Software Engineer</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">38</td>
+                  <td class="text-sm font-weight-normal">2011/05/03</td>
+                  <td class="text-sm font-weight-normal">$163,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Sakura Yamamoto</td>
+                  <td class="text-sm font-weight-normal">Support Engineer</td>
+                  <td class="text-sm font-weight-normal">Tokyo</td>
+                  <td class="text-sm font-weight-normal">37</td>
+                  <td class="text-sm font-weight-normal">2009/08/19</td>
+                  <td class="text-sm font-weight-normal">$139,575</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Thor Walton</td>
+                  <td class="text-sm font-weight-normal">Developer</td>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">61</td>
+                  <td class="text-sm font-weight-normal">2013/08/11</td>
+                  <td class="text-sm font-weight-normal">$98,540</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Finn Camacho</td>
+                  <td class="text-sm font-weight-normal">Support Engineer</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">47</td>
+                  <td class="text-sm font-weight-normal">2009/07/07</td>
+                  <td class="text-sm font-weight-normal">$87,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Serge Baldwin</td>
+                  <td class="text-sm font-weight-normal">Data Coordinator</td>
+                  <td class="text-sm font-weight-normal">Singapore</td>
+                  <td class="text-sm font-weight-normal">64</td>
+                  <td class="text-sm font-weight-normal">2012/04/09</td>
+                  <td class="text-sm font-weight-normal">$138,575</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Zenaida Frank</td>
+                  <td class="text-sm font-weight-normal">Software Engineer</td>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">63</td>
+                  <td class="text-sm font-weight-normal">2010/01/04</td>
+                  <td class="text-sm font-weight-normal">$125,250</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Zorita Serrano</td>
+                  <td class="text-sm font-weight-normal">Software Engineer</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">56</td>
+                  <td class="text-sm font-weight-normal">2012/06/01</td>
+                  <td class="text-sm font-weight-normal">$115,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Jennifer Acosta</td>
+                  <td class="text-sm font-weight-normal">
+                    Junior Javascript Developer
+                  </td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">43</td>
+                  <td class="text-sm font-weight-normal">2013/02/01</td>
+                  <td class="text-sm font-weight-normal">$75,650</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Cara Stevens</td>
+                  <td class="text-sm font-weight-normal">Sales Assistant</td>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">46</td>
+                  <td class="text-sm font-weight-normal">2011/12/06</td>
+                  <td class="text-sm font-weight-normal">$145,600</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Hermione Butler</td>
+                  <td class="text-sm font-weight-normal">Regional Director</td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">47</td>
+                  <td class="text-sm font-weight-normal">2011/03/21</td>
+                  <td class="text-sm font-weight-normal">$356,250</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Lael Greer</td>
+                  <td class="text-sm font-weight-normal">
+                    Systems Administrator
+                  </td>
+                  <td class="text-sm font-weight-normal">London</td>
+                  <td class="text-sm font-weight-normal">21</td>
+                  <td class="text-sm font-weight-normal">2009/02/27</td>
+                  <td class="text-sm font-weight-normal">$103,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Jonas Alexander</td>
+                  <td class="text-sm font-weight-normal">Developer</td>
+                  <td class="text-sm font-weight-normal">San Francisco</td>
+                  <td class="text-sm font-weight-normal">30</td>
+                  <td class="text-sm font-weight-normal">2010/07/14</td>
+                  <td class="text-sm font-weight-normal">$86,500</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Shad Decker</td>
+                  <td class="text-sm font-weight-normal">Regional Director</td>
+                  <td class="text-sm font-weight-normal">Edinburgh</td>
+                  <td class="text-sm font-weight-normal">51</td>
+                  <td class="text-sm font-weight-normal">2008/11/13</td>
+                  <td class="text-sm font-weight-normal">$183,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Michael Bruce</td>
+                  <td class="text-sm font-weight-normal">
+                    Javascript Developer
+                  </td>
+                  <td class="text-sm font-weight-normal">Singapore</td>
+                  <td class="text-sm font-weight-normal">29</td>
+                  <td class="text-sm font-weight-normal">2011/06/27</td>
+                  <td class="text-sm font-weight-normal">$183,000</td>
+                </tr>
+                <tr>
+                  <td class="text-sm font-weight-normal">Donna Snider</td>
+                  <td class="text-sm font-weight-normal">Customer Support</td>
+                  <td class="text-sm font-weight-normal">New York</td>
+                  <td class="text-sm font-weight-normal">27</td>
+                  <td class="text-sm font-weight-normal">2011/01/25</td>
+                  <td class="text-sm font-weight-normal">$112,000</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
 import { DataTable } from "simple-datatables";
 import ArgonButton from "./Common/ArgonButton.vue";
-import ArgonAvatar from "./Common/ArgonAvatar.vue";
+// import ArgonAvatar from "./Common/ArgonAvatar.vue";
 import img1 from "../assets/img/team-2.jpg";
 import img2 from "../assets/img/team-1.jpg";
 import img3 from "../assets/img/team-3.jpg";
@@ -577,7 +562,7 @@ export default {
   name: "OrderList",
   components: {
     ArgonButton,
-    ArgonAvatar,
+    // ArgonAvatar,
   },
   data() {
     return {
@@ -590,6 +575,11 @@ export default {
     };
   },
   mounted() {
+    // eslint-disable-next-line no-unused-vars
+    const dataTableSearch = new DataTable("#datatable-search", {
+      searchable: true,
+      fixedHeight: true,
+    });
     if (document.getElementById("order-list")) {
       const dataTabl = new DataTable("#order-list", {
         able: true,

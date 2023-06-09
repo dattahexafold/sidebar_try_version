@@ -20,7 +20,7 @@
             :class="$store.state.isRTL ? ' me-1' : 'ms-1'"
             >{{ navText }}</span -->
             <span
-            class="nav-link-text"
+            class="nav-link-text ms-2"
             >{{ navText }}</span
           >
         </a>

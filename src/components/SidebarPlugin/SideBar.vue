@@ -1,23 +1,19 @@
 <template>
-  <div
-    class="sidenav shadow-lg navba navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white"
+ <div
+    class="sidenav shadow-lg navba navbar-vertical  fixed-left navbar-expand-xs navbar-light bg-white"
     @mouseenter="$sidebar.onMouseEnter()"
     @mouseleave="$sidebar.onMouseLeave()"
   >
     <div class="scrollbar-inner" ref="sidebarScrollArea">
       <div class="sidenav-header d-flex align-items-center">
         <a class="navbar-brand" href="#">
-          <img
-            src="../../assets/Nova_Logo.svg"
-            class="navbar-brand-img"
-            alt="Sidebar logo"
-          />
-          <!-- <img :src="logo" class="navbar-brand-img" alt="Sidebar logo" /> -->
+        <img src="../../assets/Nova_Logo.svg" class="navbar-brand-img" alt="Sidebar logo" />
+   <!-- <img :src="logo" class="navbar-brand-img" alt="Sidebar logo" /> -->
         </a>
         <div class="ms-auto">
           <!-- Sidenav togglerr -->
           <div
-            class="sidenav-toggler me-3 me-xl-0 d-xl-block"
+            class="sidenav-toggler me-3 me-xl-0 d-xl-block "
             :class="{ active: !$sidebar.isMinimized }"
             @click="minimizeSidebar"
           >
@@ -29,22 +25,32 @@
           </div>
         </div>
       </div>
-
-      <hr class="mt-0 horizontal dark" />
-
       <slot></slot>
-
-      <SidenavList />
+      <div class="navbar-inner">
+        <ul class="navbar-nav">
+          <slot name="links">
+            <sidebar-item
+              v-for="(link, index) in sidebarLinks"
+              :key="link.name + index"
+              :link="link"
+            >
+              <sidebar-item
+                v-for="(subLink, index) in link.children"
+                :key="subLink.name + index"
+                :link="subLink"
+              >
+              </sidebar-item>
+            </sidebar-item>
+          </slot>
+        </ul>
+        <slot name="links-after"></slot>
+      </div>
     </div>
   </div>
 </template>
 <script>
-import SidenavList from "./SidenavList.vue";
 export default {
   name: "sideBar",
-  components: {
-    SidenavList,
-  },
   props: {
     title: {
       type: String,
@@ -85,6 +91,7 @@ export default {
         this.$sidebar.toggleMinimize();
       }
     },
+  
   },
   mounted() {
     //we can set minimize or full show side bar
