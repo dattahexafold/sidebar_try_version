@@ -11,6 +11,7 @@
     } ${isRTL ? 'top-0 position-sticky z-index-sticky' : ''}`"
     v-bind="$attrs"
     data-scroll="true"
+    style="margin-top:-20px"
   >
     <div class="px-3 py-1 container-fluid ">
       <bread-crumbs
