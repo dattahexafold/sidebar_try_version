@@ -1,7 +1,7 @@
 <template>
-  
+  <!-- sidebar -->
   <nav
-   
+   class="z-3"
   :class="`${
       !isNavFixed
         ? 'navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl shadow-none'
@@ -11,7 +11,7 @@
     } ${isRTL ? 'top-0 position-sticky z-index-sticky' : ''}`"
     v-bind="$attrs"
     data-scroll="true"
-    style="margin-top:-20px"
+    
   >
     <div class="px-3 py-1 container-fluid ">
       <bread-crumbs

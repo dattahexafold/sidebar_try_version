@@ -1,8 +1,8 @@
-<template> 
+<template>
   <div class="container-fluid py-4 bg-white rounded-4 mt-5 ms-3">
     <div class="d-sm-flex justify-content-between">
       <div>
-        <h6>3kg|Steel</h6>
+        <h6 class="d-flex"  >3kg|Steel</h6>
         <!-- <h6>Showing 125 orders of 3kg steel cylinder</h6> -->
         <!-- <argon-button color="blue" variant="outline">New order</argon-button> -->
       </div>
@@ -17,7 +17,7 @@
             aria-expanded="false"
             >Filters</argon-button
           >
-          <ul 
+          <ul
             class="dropdown-menu dropdown-menu-lg-start px-2 py-3"
             aria-labelledby="navbarDropdownMenuLink2"
             style
@@ -83,7 +83,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10421</p>
                     </div>
                   </td>
@@ -124,7 +123,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10422</p>
                     </div>
                   </td>
@@ -165,7 +163,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10423</p>
                     </div>
                   </td>
@@ -205,7 +202,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10424</p>
                     </div>
                   </td>
@@ -248,7 +244,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10425</p>
                     </div>
                   </td>
@@ -294,7 +289,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10426</p>
                     </div>
                   </td>
@@ -331,7 +325,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10427</p>
                     </div>
                   </td>
@@ -368,7 +361,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10428</p>
                     </div>
                   </td>
@@ -405,7 +397,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10429</p>
                     </div>
                   </td>
@@ -448,7 +439,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10430</p>
                     </div>
                   </td>
@@ -494,7 +484,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10431</p>
                     </div>
                   </td>
@@ -531,7 +520,6 @@
                 <tr>
                   <td>
                     <div class="d-flex align-items-center">
-                      
                       <p class="text-xs font-weight-bold ms-2 mb-0">#10432</p>
                     </div>
                   </td>
@@ -590,7 +578,6 @@ export default {
   components: {
     ArgonButton,
     ArgonAvatar,
-
   },
   data() {
     return {
@@ -605,7 +592,7 @@ export default {
   mounted() {
     if (document.getElementById("order-list")) {
       const dataTabl = new DataTable("#order-list", {
-      able: true,
+        able: true,
         fixedHeight: false,
         perPageSelect: false,
       });

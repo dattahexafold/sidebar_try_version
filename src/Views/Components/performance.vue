@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
-          <MainNavbar/>
+          <!-- <MainNavbar/> -->
           <div class="col-lg-3 col-md-6 col-12">
             <mini-statistics-card
               title="Overall Customer"
@@ -261,7 +261,7 @@ import BarChart from "@/components/Charts/BarChart.vue";
 import GradientLineChart from "@/components/Charts/GradientLineChart.vue";
 import LineChart from "@/components/Charts/LineChart.vue";
 import OrderList from "@/components/OrderList.vue";
-import MainNavbar from "@/components/Navbar.vue"
+// import MainNavbar from "@/components/Navbar.vue"
 export default {
   name: "PerformanceCompo",
   components: {
@@ -270,7 +270,7 @@ export default {
     GradientLineChart,
     LineChart,
     OrderList,
-    MainNavbar
+    // MainNavbar
   },
 };
 </script>

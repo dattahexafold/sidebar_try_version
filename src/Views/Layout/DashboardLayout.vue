@@ -15,9 +15,9 @@
     <div class="main-content bg-light">
       <!-- <dashboard-navbar :type="$route.meta.navbarType"></dashboard-navbar> -->
 
-<router-view>
+<!-- <router-view>
   <Performance/> 
-</router-view>
+</router-view> -->
     <!-- <content-footer v-if="!$route.meta.hideFooter"></content-footer> -->
     </div> 
   </div>
@@ -44,13 +44,13 @@ function initScrollbar(className) {
 
 // import DashboardNavbar from "./DashboardNavbar.vue";
 // import ContentFooter from "./ContentFooter.vue";
-import Performance from "../Components/performance.vue"
+// import Performance from "../Components/performance.vue"
 import { mapState } from "vuex";
 
 
 export default {
   components: {
-    Performance,
+    // Performance,
     // MainNavbar
     // DashboardNavbar,
     // ContentFooter,
