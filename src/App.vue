@@ -4,8 +4,7 @@
   <div >
     
     <side-bar v-if="!$route.meta.hideSidebar"> </side-bar>
-    <div class="main-content bg-light">
-      <SideBar/>
+    <div class="main-content bg-light position-relative max-height-vh-100 h-100">
       <NavBar />
       <router-view></router-view>
     </div>
@@ -14,7 +13,7 @@
 
 <script>
 // import DashboardLayout from './Views/Layout/DashboardLayout.vue';
-import NavBar from "@/components/Navbar.vue"
+import NavBar from "@/components/Navbar/Navbar.vue"
 export default {
   name: 'App',
   components: {

@@ -1,9 +1,9 @@
 
-// import BaseNav from "../components/Navbar/BaseNav";
+// import NavBar from "../components/Navbar/NavBar.vue";
 
 // const GlobalComponents = {
 //   install(app) {
-//     app.component("base-nav", BaseNav);
+//     app.component("nav-bar", NavBar);
 //   },
 // };
 

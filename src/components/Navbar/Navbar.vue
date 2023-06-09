@@ -4,7 +4,7 @@
    class="z-2"
   :class="`${
       !isNavFixed
-        ? 'navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl shadow-none'
+        ? 'navbar navbar-main navbar-expand-lg px-0 mx-3 border-radius-xl shadow-none'
         : `navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl shadow-none position-sticky ${
             darkMode ? 'bg-default' : 'bg-white'
           } left-auto top-2 z-index-sticky`
@@ -52,13 +52,13 @@
               "
               target="_blank"
             >
-             <img src="../assets/svg/user.svg" alt="" srcset="">
+             <img src="../../assets/svg/user.svg" alt="" srcset="">
             </router-link>
           </li>
           <li class="nav-item d-flex align-items-center cursor-pointer mr-3">
             <div  class="px-0 nav-link font-weight-bold " style="margin:0px 15px -3px" >
 
-              <img src="../assets/svg/notification.svg" alt="" srcset="" >
+              <img src="../../assets/svg/notification.svg" alt="" srcset="" >
             </div>
           </li>
           
@@ -193,7 +193,7 @@
   </nav>
 </template>
 <script>
-import BreadCrumbs from "./Breadcrumbs.vue";
+import BreadCrumbs from "../Breadcrumbs.vue";
 import { mapState, mapMutations, mapActions } from "vuex";
 
 export default {

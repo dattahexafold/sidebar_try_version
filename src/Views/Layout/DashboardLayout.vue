@@ -1,21 +1,23 @@
 <template>
   <div class="wrapper">
-    <div 
-    class="position-absolute w-100 min-height-300 top-0"
-    >
-    <span class="mask  " style="background-color: #073552;"></span>
+    <div class="position-absolute w-100 min-height-300 top-0">
+      <span class="mask  " style="background-color: #073552;"></span>
+
+    </div>
+
+    <!-- <side-bar v-if="!$route.meta.hideSidebar"> </side-bar> -->
     
-  </div>
- 
-   
+
     <div class="main-content bg-light">
       <!-- <dashboard-navbar :type="$route.meta.navbarType"></dashboard-navbar> -->
 
-<router-view>
-  <Performance/> 
-</router-view>
-    <!-- <content-footer v-if="!$route.meta.hideFooter"></content-footer> -->
-    </div> 
+      
+
+      <router-view>
+        <Performance />
+      </router-view>
+      <!-- <content-footer v-if="!$route.meta.hideFooter"></content-footer> -->
+    </div>
   </div>
 </template>
 <script>
@@ -47,10 +49,7 @@ import { mapState } from "vuex";
 export default {
   components: {
     Performance,
-    // MainNavbar
-    // DashboardNavbar,
-    // ContentFooter,
-  },
+},
   methods: {
     initScrollbar() {
       let isWindows = navigator.platform.startsWith("Win");

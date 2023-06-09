@@ -1,0 +1,30 @@
+.flex-gap-20{
+    gap:20px;
+}
+.radio-icon-position{
+    position: relative;
+    bottom: 8px;
+    left:5px;
+}
+.user-card{
+    height: 8.5rem;
+}
+.user-card-27{
+    width:27rem;
+}
+.user-card-35{
+    width:35rem;
+}
+
+.user-profile{
+    border-radius: 7px;
+}
+
+
+@media screen and (max-width:450px) {
+    .user-card{
+        visibility: hidden;
+        display: none;
+    }
+    
+}
