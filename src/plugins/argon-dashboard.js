@@ -3,7 +3,7 @@ import GlobalDirectives from "./globalDirectives";
 
 // import "../assets/css/nucleo/css/nucleo.css";
 // import "../assets/sass/argon.scss";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/SidebarPlugin";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap/dist/css/bootstrap.css"
 

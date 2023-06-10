@@ -5,20 +5,19 @@
     <div class="position-absolute w-100 min-height-300 top-0">
       <span class="mask" style="background-color: #073552"></span>
     </div>
-    <side-bar v-if="!$route.meta.hideSidebar"> </side-bar>
-    
+    <!-- <side-bar v-if="!$route.meta.hideSidebar"> </side-bar> -->
+    <SideBar />
     <div class="main-content bg-light">
-      <SideBar/>
-      <NavBar  />
+      <NavBar />
       <router-view>
-        <Performance/>
+        <Performance />
       </router-view>
     </div>
   </div>
 </template>
 
 <script>
-import Performance from "./Views/Components/performance.vue"
+import Performance from "./Views/Components/performance.vue";
 import NavBar from "@/components/Navbar.vue";
 import SideBar from "./components/Sidebar/SideBar.vue";
 export default {
@@ -26,7 +25,7 @@ export default {
   components: {
     Performance,
     NavBar,
-    SideBar
+    SideBar,
   },
 };
 </script>

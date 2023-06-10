@@ -1,5 +1,5 @@
-import Sidebar from "./SideBar.vue";
-import SidebarItem from "./SidebarItem.vue";
+import Sidebar from "../Sidebar/SideBar.vue";
+import SidebarItem from "../Sidebar/SidebarItem.vue";
 import { reactive } from "vue";
 const SidebarStore = reactive({
   showSidebar: true,
@@ -21,24 +21,25 @@ const SidebarStore = reactive({
         docClasses.add("g-sidenav-hidden");
         docClasses.remove("g-sidenav-show");
         docClasses.add("g-sidenav-hide");
-        // setTimeout(() => {
+        setTimeout(() => {
           docClasses.remove("g-sidenav-hide");
           docClasses.add("g-sidenav-hidden");
-        // },0);
-      }if (window.innerWidth <= 820) {
-        this.hovered = false; ///
-        if (!this.isMinimized) {
-          document.body.classList.remove("g-sidenav-pinned");
-          let docClasses = document.body.classList;
-          docClasses.add("g-sidenav-hidden");
-          docClasses.remove("g-sidenav-show");
-          docClasses.add("g-sidenav-hide");
-          // setTimeout(() => {
-            docClasses.remove("g-sidenav-hide");
-            docClasses.add("g-sidenav-hidden");
-          // },0);
-        }
+        },150);
       }
+      // if (window.innerWidth <= 820) {
+      //   this.hovered = false; ///
+      //   if (!this.isMinimized) {
+      //     document.body.classList.remove("g-sidenav-pinned");
+      //     let docClasses = document.body.classList;
+      //     docClasses.add("g-sidenav-hidden");
+      //     docClasses.remove("g-sidenav-show");
+      //     docClasses.add("g-sidenav-hide");
+      //     // setTimeout(() => {
+      //       docClasses.remove("g-sidenav-hide");
+      //       // docClasses.add("g-sidenav-hidden");
+      //     // },0);
+      //   }
+      // }
     }
     if (this.isMinimized) {
       docClasses.add("g-sidenav-hidden");
@@ -72,7 +73,7 @@ const SidebarStore = reactive({
       setTimeout(() => {
         docClasses.remove("g-sidenav-hide");
         docClasses.add("g-sidenav-hidden");
-      }, 300);
+      }, 880);
     }
   },
 });
