@@ -73,7 +73,7 @@ const SidebarStore = reactive({
       setTimeout(() => {
         docClasses.remove("g-sidenav-hide");
         docClasses.add("g-sidenav-hidden");
-      }, 880);
+      }, 1110);
     }
   },
 });
