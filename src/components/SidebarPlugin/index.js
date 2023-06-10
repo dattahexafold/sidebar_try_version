@@ -26,20 +26,6 @@ const SidebarStore = reactive({
           docClasses.add("g-sidenav-hidden");
         },150);
       }
-      // if (window.innerWidth <= 820) {
-      //   this.hovered = false; ///
-      //   if (!this.isMinimized) {
-      //     document.body.classList.remove("g-sidenav-pinned");
-      //     let docClasses = document.body.classList;
-      //     docClasses.add("g-sidenav-hidden");
-      //     docClasses.remove("g-sidenav-show");
-      //     docClasses.add("g-sidenav-hide");
-      //     // setTimeout(() => {
-      //       docClasses.remove("g-sidenav-hide");
-      //       // docClasses.add("g-sidenav-hidden");
-      //     // },0);
-      //   }
-      // }
     }
     if (this.isMinimized) {
       docClasses.add("g-sidenav-hidden");
@@ -73,7 +59,7 @@ const SidebarStore = reactive({
       setTimeout(() => {
         docClasses.remove("g-sidenav-hide");
         docClasses.add("g-sidenav-hidden");
-      }, 1110);
+      }, 1160);
     }
   },
 });
