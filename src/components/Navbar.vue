@@ -52,10 +52,15 @@
               "
               target="_blank"
             >
-              <i class="fa fa-user" :class="isRTL ? 'ms-sm-2' : 'me-sm-1'"></i>
-              <span v-if="isRTL" class="d-sm-inline d-none">يسجل دخول</span>
-              <span v-else class="d-sm-inline d-none">Sign In</span>
+            <img src="../assets/svg/user.svg" alt="" srcset="">
             </router-link>
+          </li>
+          <li class="nav-item d-flex align-items-center cursor-pointer mr-3">
+            <div  class="px-0 nav-link font-weight-bold " style="margin:0px 15px -3px" >
+
+              <img src="../assets/svg/notification.svg" alt="" srcset="" >
+            </div>
+         
           </li>
           
           

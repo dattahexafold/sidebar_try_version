@@ -2,7 +2,7 @@
   <!-- <DashboardLayout /> -->
 
   <div class="wrapper">
-    <div class="position-absolute w-100 min-height-300 top-0">
+    <div class="position-absolute w-100 top-0" style="height: 280px;">
       <span class="mask" style="background-color: #073552"></span>
     </div>
     <!-- <side-bar v-if="!$route.meta.hideSidebar"> </side-bar> -->

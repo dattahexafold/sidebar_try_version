@@ -3,7 +3,30 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
-          <!-- <MainNavbar/> -->
+          <div class="mt-4 col-md-4 mt-md-0 ">
+            <UserKpiComponent
+              name="Yaw Graham"
+              roll="Distributor"
+              status="true"
+              usercard="user-card-27"
+            >
+              <template #profile>
+                <img
+                  src="../../assets/img/team-1.jpg "
+                  alt=""
+                  class="user-profile mx-2"
+                  style="width: 73px"
+                />
+              </template>
+            </UserKpiComponent>
+          </div>
+
+          <div class="mt-4 col-md-6 mt-md-0">
+            <UserKpiComponent usercard="user-card-35" userdetails="true" />
+          </div>
+        </div>
+
+        <div class="row mt-2">
           <div class="col-lg-3 col-md-6 col-12">
             <mini-statistics-card
               title="Overall Customer"
@@ -60,7 +83,7 @@
               }"
             />
           </div>
-          <div class="row ">
+          <div class="row">
             <div class="mt-4 col-md-6 mt-md-0">
               <gradient-line-chart
                 id="chart-line"
@@ -102,16 +125,19 @@
                 }"
               />
             </div>
-            
-            <div class="mt-4 row ">
-              <div class="col-lg-3 col-md-6 col-12 mt-3 ">
+
+            <div class="mt-4 row">
+              <div class="col-lg-3 col-md-6 col-12 mt-3">
                 <line-chart
                   id="chart-widgets-1"
                   title="Sales"
                   title2="3kg | Steel"
                   :value="{
                     amount: 'GHs 90',
-                    percentage: { value: '+5% since last month', color: 'success' },
+                    percentage: {
+                      value: '+5% since last month',
+                      color: 'success',
+                    },
                   }"
                   :chart="{
                     labels: [
@@ -139,7 +165,10 @@
                   title2="3kg | Steel"
                   :value="{
                     amount: 'GHs 93',
-                    percentage: { value: '+6% since last month', color: 'success' },
+                    percentage: {
+                      value: '+6% since last month',
+                      color: 'success',
+                    },
                   }"
                   :chart="{
                     labels: [
@@ -167,7 +196,10 @@
                   title2="3kg | Steel"
                   :value="{
                     amount: 'GHs 93',
-                    percentage: { value: '+6% since last month', color: 'success' },
+                    percentage: {
+                      value: '+6% since last month',
+                      color: 'success',
+                    },
                   }"
                   :chart="{
                     labels: [
@@ -195,7 +227,10 @@
                   title2="3kg | Steel"
                   :value="{
                     amount: 'GHs 93',
-                    percentage: { value: '+6% since last month', color: 'success' },
+                    percentage: {
+                      value: '+6% since last month',
+                      color: 'success',
+                    },
                   }"
                   :chart="{
                     labels: [
@@ -223,7 +258,10 @@
                   title2="3kg | Steel"
                   :value="{
                     amount: 'GHs 93',
-                    percentage: { value: '+6% since last month', color: 'success' },
+                    percentage: {
+                      value: '+6% since last month',
+                      color: 'success',
+                    },
                   }"
                   :chart="{
                     labels: [
@@ -246,7 +284,7 @@
               </div>
             </div>
             <div class="row">
-              <OrderList/>
+              <OrderList />
             </div>
           </div>
         </div>
@@ -261,7 +299,7 @@ import BarChart from "@/components/Charts/BarChart.vue";
 import GradientLineChart from "@/components/Charts/GradientLineChart.vue";
 import LineChart from "@/components/Charts/LineChart.vue";
 import OrderList from "@/components/OrderList.vue";
-// import MainNavbar from "@/components/Navbar.vue"
+import UserKpiComponent from "@/components/cards/UserKpiComponent.vue";
 export default {
   name: "PerformanceCompo",
   components: {
@@ -270,7 +308,7 @@ export default {
     GradientLineChart,
     LineChart,
     OrderList,
-    // MainNavbar
+    UserKpiComponent,
   },
 };
 </script>
